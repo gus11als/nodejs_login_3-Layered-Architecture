@@ -1,6 +1,6 @@
-Node js 를 이용하여 제작한 백엔드 이력서 관리 기능 api입니다
+Node js 를 이용하여 제작한 백엔드 이력서 관리 기능 api입니다 (3-layered-architecture 적용)
  
-사용기술:  MySQL(Aws RDS), Prisma, Nodejs, jsonwebtoken, cookie-parser, express, bcrypt
+사용기술:  MySQL(Aws RDS), Prisma, Nodejs, jsonwebtoken, cookie-parser, express, bcrypt, test(jest사용)
 
 API 명세서: https://brash-bow-29e.notion.site/0f9657e57ced4d999266fcf7da3bbc22?v=50c733c6778944b68ddbe4b90990f37f&pvs=4 
 
@@ -23,6 +23,8 @@ npm install -g yarn
 
 yarn init -y
 
+git clone을 하신 후 yarn을 입력하시면 패키지에 들어있는것들이  설치가 되므로 아래의 과정을 하실필요는 없습니다 
+
 yarn add express prisma @prisma/client cookie-parser jsonwebtoken
 
 yarn add bcrypt
@@ -37,7 +39,9 @@ npx prisma db push
 
 여기까지하면 정상적으로 사용자의 mysql데이터베이스에 테이블이 생성됩니다
 
-그후 app.js를 실행시키시면 사용이 가능합니다 node app.js
+그후 app.js를 실행시키시면 사용이 가능합니다 node app.js, yarn dev로도 실행가능합니다
+
+또한 jset를 테스트 하고싶으면 yarn test를 입력하시면 됩니다.
 
 해당기능은 백엔드로만 구현이 되있기 때문에 insomnia에서 테스트를 해보실수있습니다 테스트를 하는방법은 위 명세서에 자세히 나와있으니 참고해주세요
 
